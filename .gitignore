@@ -1,0 +1,9 @@
+/.idea
+/.vscode
+/venv
+/__pycache__
+/task1/.idea
+/task1/.vscode
+/task1/venv
+/task1/__pycache__
+/task1/*.db
