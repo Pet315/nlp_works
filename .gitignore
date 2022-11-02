@@ -1,8 +1,8 @@
-/reports/*.docx
 /.idea
 /.vscode
 /venv
 /__pycache__
+/reports
 /task1/.idea
 /task1/.vscode
 /task1/venv
