@@ -1,9 +1,10 @@
 /.idea
-/*.vscode
+/.vscode
 /venv
 /__pycache__
 /reports
 /task1/.idea
+/task1/.vscode
 /task1/venv
 /task1/__pycache__
 /task2/*.db
