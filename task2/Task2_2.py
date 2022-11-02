@@ -1,7 +1,7 @@
 import sqlite3
 
 
-class Addition:
+class Task2_2:
     @staticmethod
     def connect_db(db_name='dict_ua.db'):
         try:

@@ -6,4 +6,9 @@
 /task1/.vscode
 /task1/venv
 /task1/__pycache__
-/task1/*.db
+/task2/*.db
+/task2/.idea
+/task2/.vscode
+/task2/venv
+/task2/__pycache__
+/task2/cher.py
