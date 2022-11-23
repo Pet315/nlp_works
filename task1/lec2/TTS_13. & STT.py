@@ -1,6 +1,7 @@
 import pyttsx3 # pyttsx3 is a text-to-speech conversion library in Python
 import speech_recognition as s #Google Speech API in Python
 
+
 def speech_to_text():
     sr=s.Recognizer()# an object r which recognises the voice
     with s.Microphone() as source:
@@ -9,6 +10,7 @@ def speech_to_text():
         print("recognized_text = '{0}'\n\n".format(recognized_text))
         print("ви сказали: '{0}'".format(recognized_text['alternative'][0]['transcript']))
     return "Було сказано: " + recognized_text['alternative'][0]['transcript']
+
 
 def text_to_speech(text):
     eng= pyttsx3.init()

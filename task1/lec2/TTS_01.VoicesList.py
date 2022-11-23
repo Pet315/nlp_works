@@ -10,5 +10,3 @@ for voice in voices:
 print('\nТой же список з доступом через індекс:\n')
 for i in range(0,len(voices)):
    print(voices[i].name)
-   
-   

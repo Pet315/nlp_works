@@ -8,7 +8,7 @@ voice = voices[4]  # Anatol
 engine.setProperty('voice', voice.id)
 print(voice)
 
-txt = 'Ні слова, ні півслова' 
+txt = 'Ні слова, ні півслова'
 
 engine.say(txt)
 engine.runAndWait()
