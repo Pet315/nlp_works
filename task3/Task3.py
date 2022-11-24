@@ -1,3 +1,4 @@
+import re
 import pyttsx3
 import data
 
@@ -15,33 +16,42 @@ class Task3:
             self.engine.say(txt)
             self.engine.runAndWait()
 
-    def input(self):
+    def input(self, vars=None):
+        if vars is None:
+            vars = []
         value = input()
         value = str(value)
-        while value != '1' and value != '2':
+        value = value.lower()
+        while 1:
+            for var_i in vars:
+                if value == var_i:
+                    return value
             print('Введіть 1 або 2')
             value = input()
             value = str(value)
-        return value
+            value = value.lower()
 
 
 if __name__ == "__main__":
     output_method = 1
-    process = 0
+    process = ""
     program = Task3()
     print(data.greeting)
-    while not process:
+    while not re.search('зупинити', process) and not re.search('так', process) and not re.search('бажаю', process):
         print(data.main_menu)
-        way = program.input()
-        if way == '1':
+        way = program.input(['1', 'один', "2", "два"])
+        if way == '1' or way == 'один':
             program.output(data.output_method, output_method)
-            output_method = program.input()
+            output_method = program.input(['1', 'один', "2", "два"])
             txt = 'Обрано метод: ' + str(output_method)
             program.output(txt, output_method)
         else:
-            program.output(data.intents, output_method)
-            intent = program.input()
-            txt = 'Обрано намір: ' + str(output_method)
-            program.output(txt, output_method)
+            district = input('Введіть район')
+
+            # program.output(data.intents, output_method)
+            # intent = program.input(['1', 'один', "2", "два"])
+            # txt = 'Обрано намір: ' + str(output_method)
+            # program.output(txt, output_method)
 
         process = input(data.finish)
+        process = process.lower()
