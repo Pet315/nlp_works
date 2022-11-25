@@ -1,6 +1,7 @@
 import re
 import pyttsx3
-import data
+from task3.data import messages
+import openpyxl
 
 
 class Task3:
@@ -31,6 +32,12 @@ class Task3:
             value = str(value)
             value = value.lower()
 
+    def open_excel(self):
+        wb = openpyxl.reader.excel.load_workbook(filename='data/districts.xlsx', data_only=True)
+        wb.active = 0
+        wc = wb.active
+        return wc
+
 
 if __name__ == "__main__":
     output_method = 1
@@ -46,12 +53,14 @@ if __name__ == "__main__":
             txt = 'Обрано метод: ' + str(output_method)
             program.output(txt, output_method)
         else:
-            district = input('Введіть район')
+            user_district = input('Введіть район')
+            wc = program.open_excel()
 
-            # program.output(data.intents, output_method)
-            # intent = program.input(['1', 'один', "2", "два"])
-            # txt = 'Обрано намір: ' + str(output_method)
-            # program.output(txt, output_method)
+            for district in districts:
+                if re.search(district, user_district):
+                    user_district = district
+                    break
+            print(user_district)
 
         process = input(data.finish)
         process = process.lower()
