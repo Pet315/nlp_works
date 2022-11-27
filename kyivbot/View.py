@@ -7,10 +7,13 @@ class View:
         to_json = {'output_method': output_method}
         with open('resources/output_method.json', 'w') as f:
             json.dump(to_json, f)
-        method_name = 'текстовий'
+        self.method_name = 'текстовий'
         if str(output_method) == '2':
-            method_name = 'голосовий'
-        View.output('Спосіб виведення тексту: ' + method_name)
+            self.method_name = 'голосовий'
+        View.output('Спосіб виведення тексту: ' + self.method_name)
+
+    # def __str__(self):
+    #     return str(View.output('Спосіб виведення тексту: ' + self.method_name))
 
     @staticmethod
     def output(txt):

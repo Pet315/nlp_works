@@ -20,24 +20,25 @@ def main():
                                 'Введіть 1, 2, 3 або 4')
             column_name = 'A'
             file_name = 'districts'
-            found_param = 'берег Дніпра'
+            param = 'Берег Дніпра'
             if way == '1' or way == 'один':
-                element = Element(found_param, file_name, 'G')
-                found_param = element.define_element()
+                element = Element(param, file_name, 'G')
+                param = element.define_element()
             if way == '2' or way == 'два':
-                element = Element('район', file_name, column_name)
-                found_param = element.define_element()
+                element = Element('Район', file_name, column_name)
+                param = element.define_element()
             if way == '3' or way == 'три':
-                element = Element('місцевість у районі', 'streets', 'E')
-                found_param = element.define_element()
+                pass
+                # element = Element('Місцевість у районі', 'streets', 'E')
+                # param = element.define_element()
             if way == '4' or way == 'чотири':
-                element = Element('район', file_name, column_name)
-                found_district = element.define_element()
-                if found_district == ' не знайдено':
+                element = Element('Район', file_name, column_name)
+                district = element.define_element()
+                if district == ' не знайдено':
                     continue
-                element = Element('вулицю', 'streets', column_name, 'B', found_district, 'D')
-                found_param = element.define_element()
-            if found_param == ' не знайдено':
+                element = Element('Вулицю', 'streets', column_name, district, 'D')
+                param = element.define_element()
+            if param == ' не знайдено':
                 continue
 
             # def objects_nearby
@@ -46,8 +47,9 @@ def main():
                                 'Введіть 1, 2, 3, 4 або 5')
             found_obj = ''
             if way == '1' or way == 'один':
-                element = Element(found_obj, file_name, column_name)
-                found_obj = element.define_element()
+                pass
+                # element = Element(found_obj, file_name, column_name)
+                # found_obj = element.define_element()
             if way == '2' or way == 'два':
                 pass
             if way == '3' or way == 'три':
