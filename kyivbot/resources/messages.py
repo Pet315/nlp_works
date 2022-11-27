@@ -24,4 +24,6 @@ objects_nearby = "Який об'єкт поблизу вас цікавить?\n
                  "4 - мобільні пункти незламності ДСНС\n" \
                  "5 - відділення банку"
 
+food_stores = ['atb', 'auchan', 'fora', 'furshet', 'novus', 'schedriy_koshyk', 'silpo', 'others']
+
 # finish = "Чи бажаєте ви зупинити процес?"

@@ -41,8 +41,17 @@ def main():
                                 'Введіть 1, 2, 3, 4 або 5')
             objs_nearby = []
             if way == '1' or way == 'один':
-                objs_nearby = element.define_obj_nearby(param, 'food_stores/atb')
-                print(objs_nearby)
+                nothing=True
+                for i in range(len(messages.food_stores)):
+                    found_elements = element.define_obj_nearby(param, 'food_stores/' + messages.food_stores[i])
+                    if found_elements[0] != ' не знайдено':
+                        if len(found_elements) != 0:
+                            nothing = False
+                        for i in range(len(found_elements) - 1):
+                            program.output(found_elements[i])
+                if nothing:
+                    program.output('Не знайдено')
+                    # "Продуктового магазину за вулицею ... не знайдено" => LEMMA+POS!!!
             if way == '2' or way == 'два':
                 pass
             if way == '3' or way == 'три':

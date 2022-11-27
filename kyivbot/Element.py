@@ -13,24 +13,24 @@ class Element:
 
     def use_excel_data(self, user_element):
         user_element = user_element.lower()
+
         workbook = openpyxl.reader.excel.load_workbook(filename='resources/' + self.file_name + '.xlsx', data_only=True)
         workbook.active = 0
         excel_data = workbook.active
         i = self.first_row_number
-        ed_elements = []
-        while 1:
-            if excel_data[self.column_name + str(i)].value is None:
-                if len(ed_elements) == 0:
-                    return [' не знайдено']
-                else:
-                    ed_elements.append(excel_data[self.column_name + '1'].value)
-                    return ed_elements
+        found_elements = []
+        while excel_data[self.column_name + str(i)].value is not None:
             ed_element = str(excel_data[self.column_name + str(i)].value)  # excel_data_element
             ed_element_lower = ed_element.lower()  # excel_data_element_lower
-
+            # print(ed_element_lower + '15')
+            # print(user_element + '15')
             if re.search(user_element, ed_element_lower):
-                ed_elements.append(ed_element)
+                found_elements.append(ed_element)
             i += 1
+        if len(found_elements) == 0:
+            return [' не знайдено']
+        found_elements.append(excel_data[self.column_name + '1'].value)
+        return found_elements
 
     def define_param(self):
         while 1:
@@ -63,25 +63,12 @@ class Element:
     def define_obj_nearby(self, user_element, file_name, column_name='A'):
         self.file_name = file_name
         self.column_name = column_name
+
         user_element_list = user_element.split(' ')
         user_element = ''
-
         for i in range(len(user_element_list) - 1):
             user_element += user_element_list[i]
-            if i != 0:
+            if i<len(user_element_list) - 2:
                 user_element += ' '
         found_elements = self.use_excel_data(user_element)
-
-        if found_elements[0] == ' не знайдено':
-            # "Продуктового магазину за вулицею не знайдено" => LEMMA+POS!!!
-            View.output(self.element + found_elements[0])
-        found_elements_str = ''
-
-        for i in range(len(found_elements)-1):
-            found_element_list = found_elements[i].split(' ')
-            found_element = ''
-            for i in range(1, len(found_element_list)):
-                found_element += found_element_list[i]
-                found_element += ' '
-            found_elements_str += found_elements[len(found_elements)-1] + ' - ' + found_element + '\n'
-        return found_elements_str
+        return found_elements

@@ -5,7 +5,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kyivbot/Element.py" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/Element.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kyivbot/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/atb.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/atb.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/atb.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/auchan.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/auchan.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/fora.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/fora.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/furshet.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/furshet.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/novus.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/novus.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/others.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/others.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/schedriy_koshyk.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/schedriy_koshyk.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/silpo.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/silpo.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kyivbot/resources/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/messages.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kyivbot/resources/streets.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/streets.xlsx" afterDir="false" />
     </list>
@@ -21,18 +28,25 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2I6wwRO7MEYuqe6rvqzXsg8YgKl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/5_sem/nlp_works/kyivbot/resources/food_stores"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\5_sem\nlp_works\kyivbot\resources\food_stores" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\5_sem\nlp_works\task3" />
     </key>
@@ -99,7 +113,8 @@
       <updated>1669515585712</updated>
       <workItem from="1669515592482" duration="803000" />
       <workItem from="1669543070464" duration="7826000" />
-      <workItem from="1669557730671" duration="7046000" />
+      <workItem from="1669557730671" duration="7210000" />
+      <workItem from="1669571310903" duration="15208000" />
     </task>
     <servers />
   </component>
@@ -118,7 +133,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/nlp_works$main.coverage" NAME="main Coverage Results" MODIFIED="1669564482126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kyivbot" />
-    <SUITE FILE_PATH="coverage/nlp_works$draft1.coverage" NAME="draft1 Coverage Results" MODIFIED="1669558601234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kyivbot" />
+    <SUITE FILE_PATH="coverage/nlp_works$main.coverage" NAME="main Coverage Results" MODIFIED="1669589029547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kyivbot" />
+    <SUITE FILE_PATH="coverage/nlp_works$draft1.coverage" NAME="draft1 Coverage Results" MODIFIED="1669588857551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kyivbot" />
   </component>
 </project>
