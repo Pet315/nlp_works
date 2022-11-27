@@ -36,7 +36,7 @@ def main():
                 district = element.define_element()
                 if district == ' не знайдено':
                     continue
-                element = Element('Вулицю', 'streets', column_name, district, 'D')
+                element = Element('Вулицю', 'streets', column_name, district, 'B')
                 param = element.define_element()
             if param == ' не знайдено':
                 continue
