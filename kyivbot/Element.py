@@ -5,11 +5,12 @@ from kyivbot.View import View
 
 
 class Element:
-    def __init__(self, element, file_name, column_name='A', first_row_number=2):
+    def __init__(self, element, file_name, column_name='A', additional_cn=''):
         self.element = element
         self.file_name = file_name
         self.column_name = column_name
-        self.first_row_number = first_row_number
+        self.first_row_number = 2
+        self.additional_cn = additional_cn  # additional_column_name
 
     def use_excel_data(self, user_element):
         user_element = user_element.lower()
@@ -25,14 +26,17 @@ class Element:
             # print(ed_element_lower + '15')
             # print(user_element + '15')
             if re.search(user_element, ed_element_lower):
-                found_elements.append(ed_element)
+                if self.additional_cn == '':
+                    found_elements.append(ed_element)
+                else:
+                    found_elements.append(str(excel_data[self.additional_cn + str(i)].value))
             i += 1
         if len(found_elements) == 0:
             return [' не знайдено']
         found_elements.append(excel_data[self.column_name + '1'].value)
         return found_elements
 
-    def define_param(self):
+    def find_param(self):
         while 1:
             if self.element.find(' ') != -1:  # Берег Дніпра => берег Дніпра
                 element = self.element.split(' ')
@@ -60,7 +64,7 @@ class Element:
             View.output(self.element + ' зафіксовано')
             return found_element
 
-    def define_obj_nearby(self, user_element, file_name, column_name='A'):
+    def find_object_nearby(self, user_element, file_name, column_name='A'):
         self.file_name = file_name
         self.column_name = column_name
 
@@ -71,4 +75,5 @@ class Element:
             if i<len(user_element_list) - 2:
                 user_element += ' '
         found_elements = self.use_excel_data(user_element)
+        # return ['']
         return found_elements

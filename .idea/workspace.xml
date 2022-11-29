@@ -5,21 +5,40 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kyivbot/Element.py" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/Element.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kyivbot/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/atb.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/auchan.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/auchan.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/fora.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/fora.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/furshet.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/furshet.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/novus.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/novus.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/others.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/others.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/schedriy_koshyk.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/schedriy_koshyk.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kyivbot/resources/food_stores/silpo.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/food_stores/silpo.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/atms/alfa-bank.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/atms/alfa-bank.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/atms/oschadbank.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/atms/oschadbank.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/atms/privatbank.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/atms/privatbank.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/atms/raiffaisen.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/atms/raiffaisen.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/atms/ukrsibbank.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/atms/ukrsibbank.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/banks/alfa-bank.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/banks/alfa-bank.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/banks/oschadbank.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/banks/oschadbank.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/banks/privatbank.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/banks/privatbank.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/banks/raiffaisen.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/banks/raiffaisen.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/banks/ukrsibbank.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/banks/ukrsibbank.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/gas_station/amic.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/gas_stations/amic.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/gas_station/brsm.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/gas_stations/brsm.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/gas_station/glusco.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/gas_stations/glusco.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/gas_station/klo.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/gas_stations/klo.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/gas_station/okko.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/gas_stations/okko.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/gas_station/others.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/gas_stations/others.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/gas_station/wog.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/gas_stations/wog.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/invincibility_objects.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/invincibility.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kyivbot/resources/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/messages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kyivbot/resources/streets.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/streets.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/mob_operators/kyivstar.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/mob_operators/kyivstar.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/mob_operators/lifecell.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/mob_operators/lifecell.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kyivbot/resources/mob_operators/vodafone.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kyivbot/resources/mob_operators/vodafone.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,11 +59,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/5_sem/nlp_works/kyivbot/resources/food_stores"
+    "last_opened_file_path": "D:/5_sem/nlp_works/kyivbot/resources"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\5_sem\nlp_works\kyivbot\resources" />
+      <recent name="D:\5_sem\nlp_works\kyivbot\resources\banks" />
+      <recent name="D:\5_sem\nlp_works\kyivbot\resources\mob_operators" />
+      <recent name="D:\5_sem\nlp_works\kyivbot\resources\gas_stations" />
       <recent name="D:\5_sem\nlp_works\kyivbot\resources\food_stores" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -114,7 +137,10 @@
       <workItem from="1669515592482" duration="803000" />
       <workItem from="1669543070464" duration="7826000" />
       <workItem from="1669557730671" duration="7210000" />
-      <workItem from="1669571310903" duration="15208000" />
+      <workItem from="1669571310903" duration="15504000" />
+      <workItem from="1669636431973" duration="564000" />
+      <workItem from="1669662466834" duration="1865000" />
+      <workItem from="1669723308203" duration="18649000" />
     </task>
     <servers />
   </component>
@@ -133,7 +159,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/nlp_works$main.coverage" NAME="main Coverage Results" MODIFIED="1669589029547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kyivbot" />
-    <SUITE FILE_PATH="coverage/nlp_works$draft1.coverage" NAME="draft1 Coverage Results" MODIFIED="1669588857551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kyivbot" />
+    <SUITE FILE_PATH="coverage/nlp_works$main.coverage" NAME="main Coverage Results" MODIFIED="1669751614561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kyivbot" />
+    <SUITE FILE_PATH="coverage/nlp_works$draft1.coverage" NAME="draft1 Coverage Results" MODIFIED="1669748835133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kyivbot" />
   </component>
 </project>

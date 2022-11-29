@@ -3,64 +3,73 @@ from kyivbot.View import View
 from kyivbot.resources import messages
 
 
+def open_excel_file(file_name):
+    workbook = openpyxl.reader.excel.load_workbook(filename='resources/' + file_name + '.xlsx', data_only=True)
+    workbook.active = 0
+    excel_data = workbook.active
+    return excel_data
+
+
 def main():
     program = View()
     print(messages.greeting)
     while 1:
         program.output(messages.main_menu)
         way = program.input(['1', 'один', '2', 'два'], 'Введіть 1 або 2')
-        if way == '1' or way == 'один':
+        if way == '1' or way == 'один':  # перший, перше => LEMMA+POS
             program.output(messages.choose_output_method)
             output_method = program.input(['1', 'один', "2", "два"], 'Введіть 1 або 2')
             program = View(output_method)
         else:
             # def params
             program.output(messages.params)
-            way = program.input(['1', 'один', '2', 'два', '3', 'три', '4', 'чотири'],
-                                'Введіть 1, 2, 3 або 4')
+            way = program.input(['1', 'один', '2', 'два', '3', 'три'],
+                                'Введіть 1, 2, або 3')
             file_name = 'districts'
-            param = 'Берег Дніпра'
+            streets = []
             if way == '1' or way == 'один':
-                element = Element(param, file_name, 'G')
-                param = element.define_param()
+                element = Element('Берег Дніпра', file_name, 'G')
+                part = element.find_param()
             elif way == '2' or way == 'два':
                 element = Element('Район', file_name)
-                param = element.define_param()
-            # elif way == '3' or way == 'три':
-                # element = Element('Місцевість у районі', 'streets', 'E')
-                # param = element.define_element()
+                district = element.find_param()
+                element2 = Element('Вулиці району', 'streets', 'B', 'A')
+                streets = element2.use_excel_data(district)
+                # print(streets)
             else:
                 element = Element('Вулицю', 'streets')
-                param = element.define_param()
-            if param == ' не знайдено':
+                streets.append(element.find_param())
+            if streets[0] == ' не знайдено':
                 continue
 
             # def objects_nearby
             program.output(messages.objects_nearby)
-            way = program.input(['1', 'один', '2', 'два', '3', 'три', '4', 'чотири', '5', "п'ять"],
-                                'Введіть 1, 2, 3, 4 або 5')
-            objs_nearby = []
-            if way == '1' or way == 'один':
-                nothing=True
-                for i in range(len(messages.food_stores)):
-                    found_elements = element.define_obj_nearby(param, 'food_stores/' + messages.food_stores[i])
-                    if found_elements[0] != ' не знайдено':
-                        if len(found_elements) != 0:
-                            nothing = False
-                        for i in range(len(found_elements) - 1):
-                            program.output(found_elements[i])
-                if nothing:
-                    program.output('Не знайдено')
-                    # "Продуктового магазину за вулицею ... не знайдено" => LEMMA+POS!!!
-            if way == '2' or way == 'два':
-                pass
-            if way == '3' or way == 'три':
-                pass
-            if way == '4' or way == 'чотири':
-                pass
-            if way == '5' or way == "п'ять":
-                pass
+            vars = ['1', 'один', '2', 'два', '3', 'три', '4', 'чотири', '5', "п'ять", '6', 'шість']
+            way = program.input(vars, 'Введіть 1, 2, 3, 4, 5, або 6')
+            type = []
+            objs_list = []
+            j=0
+            for i in range(len(messages.onb_type_names)):
+                if way == vars[j] or way == vars[j+1]:
+                    type = messages.onb_type_names[i]  # objects_nearby_type_names
+                    objs_list = messages.onb_types[i]  # objects_nearby_types
+                j+=2
+
+            nothing = True
+            for i in range(len(objs_list)):
+                objects_nearby = []
+                for j in range(len(streets)):
+                    # print(streets[j])
+                    objects_nearby.append(element.find_object_nearby(streets[j], type + objs_list[i]))
+                if objects_nearby[0] != ' не знайдено':
+                    if len(objects_nearby) != 0:
+                        nothing = False
+                    for i in range(len(objects_nearby) - 1):
+                        program.output(objects_nearby[i])
+            if nothing:
+                program.output('Не знайдено')
+                # "Продуктового магазину за вулицею ... не знайдено" => LEMMA+POS!!!
 
 
 if __name__ == "__main__":
-    main()
+    main()  # запуск бота
