@@ -11,19 +11,19 @@ def open_excel_file(file_name):
 
 
 def main():
-    program = View()
+    view = View()
     print(messages.greeting)
     while 1:
-        program.output(messages.main_menu)
-        way = program.input(['1', 'один', '2', 'два'], 'Введіть 1 або 2')
+        view.output(messages.main_menu)
+        way = view.input(['1', 'один', '2', 'два'], 'Введіть 1 або 2')
         if way == '1' or way == 'один':  # перший, перше => LEMMA+POS
-            program.output(messages.choose_output_method)
-            output_method = program.input(['1', 'один', "2", "два"], 'Введіть 1 або 2')
-            program = View(output_method)
+            view.output(messages.choose_output_method)
+            output_method = view.input(['1', 'один', "2", "два"], 'Введіть 1 або 2')
+            view = View(output_method)
         else:
             # def params
-            program.output(messages.params)
-            way = program.input(['1', 'один', '2', 'два', '3', 'три'],
+            view.output(messages.params)
+            way = view.input(['1', 'один', '2', 'два', '3', 'три'],
                                 'Введіть 1, 2, або 3')
             file_name = 'districts'
             streets = []
@@ -43,9 +43,9 @@ def main():
                 continue
 
             # def objects_nearby
-            program.output(messages.objects_nearby)
+            view.output(messages.objects_nearby)
             vars = ['1', 'один', '2', 'два', '3', 'три', '4', 'чотири', '5', "п'ять", '6', 'шість']
-            way = program.input(vars, 'Введіть 1, 2, 3, 4, 5, або 6')
+            way = view.input(vars, 'Введіть 1, 2, 3, 4, 5, або 6')
             type = []
             objs_list = []
             j=0
@@ -64,9 +64,9 @@ def main():
                     if len(objects_nearby) != 0:
                         nothing = False
                     for k in range(len(objects_nearby)-1):
-                        program.output(objects_nearby[k])
+                        view.output(objects_nearby[k])
             if nothing:
-                program.output('Не знайдено')
+                view.output('Не знайдено')
                 # "Продуктового магазину за вулицею ... не знайдено" => LEMMA+POS!!!
 
 
