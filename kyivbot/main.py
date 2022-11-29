@@ -59,13 +59,12 @@ def main():
             for i in range(len(objs_list)):
                 objects_nearby = []
                 for j in range(len(streets)):
-                    # print(streets[j])
-                    objects_nearby.append(element.find_object_nearby(streets[j], type + objs_list[i]))
+                    objects_nearby = element.find_object_nearby(streets[j], type + objs_list[i])
                 if objects_nearby[0] != ' не знайдено':
                     if len(objects_nearby) != 0:
                         nothing = False
-                    for i in range(len(objects_nearby) - 1):
-                        program.output(objects_nearby[i])
+                    for k in range(len(objects_nearby)-1):
+                        program.output(objects_nearby[k])
             if nothing:
                 program.output('Не знайдено')
                 # "Продуктового магазину за вулицею ... не знайдено" => LEMMA+POS!!!
