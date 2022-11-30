@@ -14,7 +14,6 @@ class Element:
 
     def use_excel_data(self, user_element):
         user_element = user_element.lower()
-
         workbook = openpyxl.reader.excel.load_workbook(filename='resources/' + self.file_name + '.xlsx', data_only=True)
         workbook.active = 0
         excel_data = workbook.active
@@ -25,12 +24,14 @@ class Element:
             ed_element_lower = ed_element.lower()  # excel_data_element_lower
             # print(ed_element_lower + '15')
             # print(user_element + '15')
-            if re.search(user_element, ed_element_lower):
-                if self.additional_cn == '':
-                    found_elements.append(ed_element)
-                else:
-                    found_elements.append(str(excel_data[self.additional_cn + str(i)].value))
+            if len(user_element) > 0:
+                if re.search(user_element, ed_element_lower):
+                    if self.additional_cn == '':
+                        found_elements.append(ed_element)
+                    else:
+                        found_elements.append(str(excel_data[self.additional_cn + str(i)].value))
             i += 1
+        # print(found_elements)
         if len(found_elements) == 0:
             return [' не знайдено']
         found_elements.append(excel_data[self.column_name + '1'].value)
@@ -38,11 +39,7 @@ class Element:
 
     def find_param(self):
         while 1:
-            if self.element.find(' ') != -1:  # Берег Дніпра => берег Дніпра
-                element = self.element.split(' ')
-                element = element[0].lower() + ' ' + element[1]
-            else:  # Район => район
-                element = self.element.lower()
+            element = self.element.lower()
             View.output('Введіть ' + element + ': ')
             user_element = input()
             found_element = self.use_excel_data(user_element)[0]

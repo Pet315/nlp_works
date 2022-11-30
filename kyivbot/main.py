@@ -28,13 +28,11 @@ def main():
             file_name = 'districts'
             streets = []
             if way == '1' or way == 'один':
-                element = Element('Берег Дніпра', file_name, 'G')
-                part = element.find_param()
-            elif way == '2' or way == 'два':
                 element = Element('Район', file_name)
                 district = element.find_param()
                 element2 = Element('Вулиці району', 'streets', 'B', 'A')
                 streets = element2.use_excel_data(district)
+                streets[len(streets)-1] = district
                 # print(streets)
             else:
                 element = Element('Вулицю', 'streets')
@@ -57,14 +55,13 @@ def main():
 
             nothing = True
             for i in range(len(objs_list)):
-                objects_nearby = []
                 for j in range(len(streets)):
                     objects_nearby = element.find_object_nearby(streets[j], type + objs_list[i])
-                if objects_nearby[0] != ' не знайдено':
-                    if len(objects_nearby) != 0:
-                        nothing = False
                     for k in range(len(objects_nearby)-1):
                         view.output(objects_nearby[k])
+                    if objects_nearby[0] != ' не знайдено' and nothing:
+                        if len(objects_nearby) != 0:
+                            nothing = False
             if nothing:
                 view.output('Не знайдено')
                 # "Продуктового магазину за вулицею ... не знайдено" => LEMMA+POS!!!
