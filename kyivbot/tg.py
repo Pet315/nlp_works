@@ -1,27 +1,23 @@
-from telegram.ext import Updater, CommandHandler
+import telebot
+import config
+# from kyivbot.View import View
+from kyivbot.resources import messages
+
+bot = telebot.TeleBot(config.TOKEN)
 
 
-def start(update, context):
-    update.message.reply_text('Hello')
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.send_message(message.chat.id, messages.greeting)
+    # view = View()
+    # view.output(messages.main_menu, message)
 
 
-def help():
+@bot.message_handler(content_types=['text'])
+def input(message):
     pass
 
 
-def run_bot():
-    TOKEN = ""
-
-    # create the updater, that will automatically create also a dispatcher and a queue to make them dialog
-    updater = Updater(TOKEN, use_context=True)
-    dispatcher = updater.dispatcher
-
-    # add handlers for start and help commands
-    dispatcher.add_handler(CommandHandler("start", start))
-    dispatcher.add_handler(CommandHandler("help", help))
-
-    # start your shiny new bot
-    updater.start_polling()
-
-    # run the bot until Ctrl-C
-    updater.idle()
+# RUN
+if __name__ == "__main__":
+    bot.polling(none_stop=True)

@@ -1,3 +1,4 @@
+/.idea
 /.vscode
 /venv
 /__pycache__
@@ -11,6 +12,8 @@
 /task2/venv
 /task2/__pycache__
 /task2/draft1.py
-/kyivbot/draft1.py
-/kyivbot/diagrams
 /kyivbot/__pycache__
+/kyivbot/draft1.py
+/kyivbot/draft2.py
+/kyivbot/diagrams
+/kyivbot/resources/*.db
