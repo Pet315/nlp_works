@@ -1,6 +1,5 @@
 import re
 import openpyxl
-
 from kyivbot.View import View
 
 
