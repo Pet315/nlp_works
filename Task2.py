@@ -28,7 +28,7 @@ class Task2:
         self.cursor.execute(sqlite_select_query, (data[0], new_fid))
         return [self.cursor.fetchone(), fid_structure]
 
-    def taging(self, word):
+    def pos_tagging(self, word):
         wf = self.lemma(word)[0]
         fid_structure = self.lemma(word)[1]
 
@@ -95,6 +95,6 @@ if __name__ == "__main__":
     print(a.lemma('руками')[0][0])
 
     # POS-тегування
-    print(a.taging('сумці'))
+    print(a.pos_tagging('сумці'))
 
     a.close()

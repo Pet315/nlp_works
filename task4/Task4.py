@@ -5,7 +5,6 @@ from task4 import gr_fields
 class Task4:
     def __init__(self, db_name='dict_ua.db'):
         self.words = None
-        self.lemmas = None
         self.sqlite_connection = self.connect_db(db_name)
         self.cursor = self.sqlite_connection.cursor()
 
@@ -111,7 +110,7 @@ def main(word):
 
     print("\n---\n1. Процес заповнення словника зі словами")
     print('\t', a.find_words(word))  # {wf_accent_1: [wf_fk_inf_1, wf_fid_1, ''], ...}
-    print('\t', a.find_lemmas())  # {..., wf_accent_l1: [wf_fk_inf_l1, wf_fid_l1, 'лема', ...}
+    print('\t', a.find_lemmas())  # {..., wf_accent_l1: [wf_fk_inf_l1, wf_fid_l1, 'лема'], ...}
     print('\t', a.short_description())  # {wf_accent_1: [parts_com_1, parts_gr_id_1, fid_second_part_1, ''], ...}
     print('\t', a.full_description())  # {wf_accent_1: [parts_com_1, gr_field_1], ...}
 
