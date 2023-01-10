@@ -1,10 +1,16 @@
-from Task2_2 import Task2_2
+import sqlite3
 
 
-class Task2_1:
+class Task2:
     def __init__(self):
-        self.sqlite_connection = Task2_2.connect_db()
+        self.sqlite_connection = self.connect_db()
         self.cursor = self.sqlite_connection.cursor()
+
+    def connect_db(self, db_name='dict_ua.db'):
+        try:
+            return sqlite3.connect(db_name)
+        except sqlite3.Error as error:
+            print("Error: ", error)
 
     def close(self):
         if (self.sqlite_connection):
@@ -12,12 +18,19 @@ class Task2_1:
             # print('sqlite connection closed')
 
     def lemma(self, word):
-        wf = Task2_2.lemma(self.cursor, word)[0]
-        return wf[0]
+        sqlite_select_query = """SELECT fk_inf,fid from wf where wf=?"""
+        self.cursor.execute(sqlite_select_query, (word,))
+        data = self.cursor.fetchone()
+        fid_structure = data[1].rsplit('_')
+
+        new_fid = fid_structure[0] + '_1'
+        sqlite_select_query = """SELECT wf from wf where fk_inf=? and fid=?"""
+        self.cursor.execute(sqlite_select_query, (data[0], new_fid))
+        return [self.cursor.fetchone(), fid_structure]
 
     def taging(self, word):
-        wf = Task2_2.lemma(self.cursor, word)[0]
-        fid_structure = Task2_2.lemma(self.cursor, word)[1]
+        wf = self.lemma(word)[0]
+        fid_structure = self.lemma(word)[1]
 
         fid_tail = int(fid_structure[1])
         if fid_tail < 8:
@@ -41,7 +54,7 @@ class Task2_1:
         if fid_tail == 7 or fid_tail == 14:
             vidm = "Клич"
 
-        sqlite_connection1 = Task2_2.connect_db('mph_ua.db')
+        sqlite_connection1 = self.connect_db('mph_ua.db')
         cursor1 = sqlite_connection1.cursor()
 
         sqlite_select_query = """SELECT com,istota,rid from parts where id=?"""
@@ -76,10 +89,10 @@ class Task2_1:
 
 
 if __name__ == "__main__":
-    a = Task2_1()
+    a = Task2()
 
     # Лематизація
-    print(a.lemma('руками'))
+    print(a.lemma('руками')[0][0])
 
     # POS-тегування
     print(a.taging('сумці'))
