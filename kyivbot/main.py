@@ -28,7 +28,7 @@ def start():
             break
 
 
-def get_params():  # визначення вулиці, або списку вулиць за вибраним районом/місцевістю
+def get_params():  # definition of a street, or a list of streets by the selected district/locality
     way = Customer.speech(['1', '2', '3'], 'Введіть 1, 2 або 3')
     streets = []
     if way == '1':
@@ -50,7 +50,7 @@ def get_params():  # визначення вулиці, або списку ву
     return [streets, intent]
 
 
-def get_objects_nearby(assistant, streets, intent):  # визначення об'єктів розташованих на вулиці/вулицях
+def get_objects_nearby(assistant, streets, intent):  # identification of objects located on the street/streets
     vars = ['1', '2', '3', '4', '5', '6']
     way = Customer.speech(vars, 'Введіть 1, 2, 3, 4, 5, або 6')
     type = []
@@ -76,7 +76,7 @@ def get_objects_nearby(assistant, streets, intent):  # визначення об
         onb_type_name_parts = messages.onb_type_names_ukr[way].split(' ')
         onb_type_name = ''
         for i in range(len(onb_type_name_parts)):
-            onb_type_name += assistant.check_sort(onb_type_name_parts[i], 'Р')  # Банкомат => Банкомата (перетворення у родовий відмінок)
+            onb_type_name += assistant.check_sort(onb_type_name_parts[i], 'Р')  # Банкомат => Банкомата (transformation into genitive case)
             if i == 0:
                 onb_type_name = assistant.first_letter_upper(onb_type_name)
             if i != len(onb_type_name_parts)-1:
@@ -85,4 +85,4 @@ def get_objects_nearby(assistant, streets, intent):  # визначення об
 
 
 if __name__ == "__main__":
-    start()  # запуск бота
+    start()  # bot launch

@@ -106,18 +106,18 @@ class Task4:
 
 def main(word):
     a = Task4()
-    print("---\nPOS-тегування та лематизація слова: " + word)
+    print("---\nPOS tagging and word lemmatization: " + word)
 
-    print("\n---\n1. Процес заповнення словника зі словами")
+    print("\n---\n1. The process of filling a dictionary with words")
     print('\t', a.find_words(word))  # {wf_accent_1: [wf_fk_inf_1, wf_fid_1, ''], ...}
     print('\t', a.find_lemmas())  # {..., wf_accent_l1: [wf_fk_inf_l1, wf_fid_l1, 'лема'], ...}
     print('\t', a.short_description())  # {wf_accent_1: [parts_com_1, parts_gr_id_1, fid_second_part_1, ''], ...}
     print('\t', a.full_description())  # {wf_accent_1: [parts_com_1, gr_field_1], ...}
 
-    print("\n---\n2. Леми")
+    print("\n---\n2. Lemmas")
     print(a.get_words('лема'))
 
-    print("---\n3. POS-теги")
+    print("---\n3. POS tags")
     print(a.get_words())
 
     a.close()

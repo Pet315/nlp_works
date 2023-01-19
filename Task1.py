@@ -1,4 +1,4 @@
-# 1. Встановити бібліотеки/модулі/пакети для розпізнавання та синтезу українського мовлення.
+# 1. Install libraries/modules/packages for recognition and synthesis of Ukrainian speech.
 import pyttsx3
 import speech_recognition
 
@@ -21,14 +21,14 @@ def speech(text):
     engine_object.say(text)
     engine_object.runAndWait()
 
-# 2. Встановити локально українські голоси
+# 2. Install local Ukrainian voices
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 print('Локально доступні голоси (встановлені + ті, що за замовчуванням):')
 for voice in voices:
    print(voice.name)
 
-# 3. Простий чат-бот (ехо-чат-бот) з функціями розпізнавання українського мовлення та промовляння розпізнаної фрази.
+# 3. A simple chatbot (echo-chatbot) with the functions of recognizing Ukrainian speech and speaking the recognized phrase.
 print('---')
 print('Скажіть щось...')
 speech(recognition())

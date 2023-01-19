@@ -91,10 +91,10 @@ class Task2:
 if __name__ == "__main__":
     a = Task2()
 
-    # Лематизація
+    # Lemmatization
     print(a.lemma('руками')[0][0])
 
-    # POS-тегування
+    # POS tagging
     print(a.pos_tagging('сумці'))
 
     a.close()
